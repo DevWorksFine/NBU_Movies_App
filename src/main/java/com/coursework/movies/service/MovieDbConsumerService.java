@@ -14,7 +14,6 @@ public class MovieDbConsumerService {
     private static final String API_KEY = "4ee0c1d8";
     private static final String API_URI = "http://www.omdbapi.com/?apikey={apiKey}&t={title}";
 
-
     public MovieDTO getMovieByTitle(String title) {
 
         URI uri = new UriTemplate(API_URI).expand(API_KEY, title);
