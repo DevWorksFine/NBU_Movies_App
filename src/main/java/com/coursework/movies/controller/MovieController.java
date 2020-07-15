@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class MovieController {
+public class MovieController extends AbstractController {
 
     private MovieDbConsumerService movieConsumerService;
 
