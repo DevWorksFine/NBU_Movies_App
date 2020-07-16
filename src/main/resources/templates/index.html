@@ -6,7 +6,12 @@
 </head>
 <body>
 <h1>Home page</h1>
+<form action="#" th:action="@{/getmovie}" method="get">
+    <input type="text" th:name="title"/>
+    <input type="submit" />
+</form>
 
+<img>
 <th:block th:replace="fragments/header :: header"></th:block>
 <main>
     <div>

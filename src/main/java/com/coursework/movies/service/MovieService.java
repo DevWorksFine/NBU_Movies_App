@@ -4,11 +4,10 @@ import com.coursework.movies.domain.MovieEntity;
 import com.coursework.movies.domain.movie.MovieDTO;
 import com.coursework.movies.mapper.MovieMapper;
 import com.coursework.movies.repository.MovieRepository;
-import ma.glasnost.orika.MapperFacade;
-import ma.glasnost.orika.MapperFactory;
-import ma.glasnost.orika.impl.DefaultMapperFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class MovieService {
@@ -24,5 +23,9 @@ public class MovieService {
         MovieEntity entity = mapper.map(movieDTO,MovieEntity.class);
 
         return movieRepository.save(entity);
+    }
+
+    public List<MovieEntity> getAllMovies() {
+        return (List<MovieEntity>) movieRepository.findAll();
     }
 }

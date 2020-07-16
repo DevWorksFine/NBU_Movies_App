@@ -27,12 +27,13 @@ public class MovieController extends AbstractController {
     }
 
     @GetMapping(value = "/getmovie", produces = "application/json")
-    public ResponseEntity<MovieDTO> getMovieByTitle(@RequestParam String title) {
+    public ResponseEntity<MovieDTO> getMovieByTitle(@RequestParam(value = "title") String title) {
 
         MovieDTO movie = movieConsumerService.getMovieByTitle(title);
         movieService.saveMovie(movie);
 
         return new ResponseEntity<>(movie, HttpStatus.OK);
     }
+
 
 }

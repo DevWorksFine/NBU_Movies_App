@@ -13,6 +13,15 @@ public class MovieMapper extends ConfigurableMapper {
         mapperFactory.classMap(MovieDTO.class, MovieEntity.class)
                 .field("title","title")
                 .field("released","releaseDate")
+                .field("poster","poster")
+                .field("year","year")
+                .field("actors","actors")
+                .field("director","director")
+                .field("runTime","runTime")
+                .field("production","production")
+                .field("writer","writer")
+                .field("plot","plot")
                 .register();
     }
+
 }
