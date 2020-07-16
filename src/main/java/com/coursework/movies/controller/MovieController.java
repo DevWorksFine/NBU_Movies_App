@@ -30,9 +30,7 @@ public class MovieController extends AbstractController {
     public ResponseEntity<MovieDTO> getMovieByTitle(@RequestParam String title) {
 
         MovieDTO movie = movieConsumerService.getMovieByTitle(title);
-        MovieEntity movieEntity =  new MovieEntity();
-        movieEntity.setTitle(movie.getTitle());
-        movieService.saveMovie(movieEntity);
+        movieService.saveMovie(movie);
 
         return new ResponseEntity<>(movie, HttpStatus.OK);
     }
