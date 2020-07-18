@@ -1,38 +1,219 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Conte</html>nt</title>
+    <title>Getting Started: Serving Web Content>nt</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/9d2471305a.js"></script>
+    <link type="text/css" media="all" href="../static/styles.css" th:href="@{/styles.css}" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
+<!--<nav class="navbar fixed-top ">
+
+    <div class="container">
+
+        <div class="navbar-translate d-flex align-content-center">
+            <i class="fas fa-video nav-logo"></i>
+            <a class="nav-title" href="/">MovieBrowser</a>
+
+            <div class="d-flex flex-column w-100">
+                <div class="position-relative">
+                    <input name="search" placeholder="Search by movie title" type="text" class="search-input form-control" value="">
+                    <i class="fas fa-search search-btn"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="justify-content-end">
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="/">
+                        <button class="btn-round btn-sign btn btn-danger">SIGN IN</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
+<!--
 <h1>Home page</h1>
 <form action="#" th:action="@{/getmovie}" method="get">
     <input type="text" th:name="title"/>
     <input type="submit" />
 </form>
 
-<img>
-<th:block th:replace="fragments/header :: header"></th:block>
+<div th:replace="fragments/header :: header"></div>
+-->
+
 <main>
-    <div>
+    <div class="container">
+    <div class="d-flex flex-wrap justify-content-md-between justify-content-center mw-50 ">
+        <div class="row">
+            <div class="col">
+                <div class="movie-card card">
+                    <a href=""><img src="https://image.tmdb.org/t/p/w300/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" alt="The Old Guard" class="fadeIn animated card-img-top" /></a>
+                    <div class="card-body">
+                        <a href="">
+                            <span class="card-rating">7.4</span>
+                            <div class="mb-1 mr-4 card-title">The Old Guard</div>
+                            <p class="small mb-0">Action, Fantasy</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col">
+                <div class="movie-card card">
+                    <a href=""><img src="https://image.tmdb.org/t/p/w300/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" alt="The Old Guard" class="fadeIn animated card-img-top" /></a>
+                    <div class="card-body">
+                        <a href="">
+                            <span class="card-rating">7.4</span>
+                            <div class="mb-1 mr-4 card-title">The Old Guard</div>
+                            <p class="small mb-0">Action, Fantasy</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="movie-card card">
+                    <a href=""><img src="https://image.tmdb.org/t/p/w300/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" alt="The Old Guard" class="fadeIn animated card-img-top" /></a>
+                    <div class="card-body">
+                        <a href="">
+                            <span class="card-rating">7.4</span>
+                            <div class="mb-1 mr-4 card-title">The Old Guard</div>
+                            <p class="small mb-0">Action, Fantasy</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="movie-card card">
+                    <a href=""><img src="https://image.tmdb.org/t/p/w300/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" alt="The Old Guard" class="fadeIn animated card-img-top" /></a>
+                    <div class="card-body">
+                        <a href="">
+                            <span class="card-rating">7.4</span>
+                            <div class="mb-1 mr-4 card-title">The Old Guard</div>
+                            <p class="small mb-0">Action, Fantasy</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="movie-card card">
+                    <a href=""><img src="https://image.tmdb.org/t/p/w300/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" alt="The Old Guard" class="fadeIn animated card-img-top" /></a>
+                    <div class="card-body">
+                        <a href="">
+                            <span class="card-rating">7.4</span>
+                            <div class="mb-1 mr-4 card-title">The Old Guard</div>
+                            <p class="small mb-0">Action, Fantasy</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="movie-card card">
+                    <a href=""><img src="https://image.tmdb.org/t/p/w300/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" alt="The Old Guard" class="fadeIn animated card-img-top" /></a>
+                    <div class="card-body">
+                        <a href="">
+                            <span class="card-rating">7.4</span>
+                            <div class="mb-1 mr-4 card-title">The Old Guard</div>
+                            <p class="small mb-0">Action, Fantasy</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="movie-card card">
+                    <a href=""><img src="https://image.tmdb.org/t/p/w300/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" alt="The Old Guard" class="fadeIn animated card-img-top" /></a>
+                    <div class="card-body">
+                        <a href="">
+                            <span class="card-rating">7.4</span>
+                            <div class="mb-1 mr-4 card-title">The Old Guard</div>
+                            <p class="small mb-0">Action, Fantasy</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="movie-card card">
+                    <a href=""><img src="https://image.tmdb.org/t/p/w300/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" alt="The Old Guard" class="fadeIn animated card-img-top" /></a>
+                    <div class="card-body">
+                        <a href="">
+                            <span class="card-rating">7.4</span>
+                            <div class="mb-1 mr-4 card-title">The Old Guard</div>
+                            <p class="small mb-0">Action, Fantasy</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="movie-card card">
+                    <a href=""><img src="https://image.tmdb.org/t/p/w300/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" alt="The Old Guard" class="fadeIn animated card-img-top" /></a>
+                    <div class="card-body">
+                        <a href="">
+                            <span class="card-rating">7.4</span>
+                            <div class="mb-1 mr-4 card-title">The Old Guard</div>
+                            <p class="small mb-0">Action, Fantasy</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="movie-card card">
+                    <a href=""><img src="https://image.tmdb.org/t/p/w300/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" alt="The Old Guard" class="fadeIn animated card-img-top" /></a>
+                    <div class="card-body">
+                        <a href="">
+                            <span class="card-rating">7.4</span>
+                            <div class="mb-1 mr-4 card-title">The Old Guard</div>
+                            <p class="small mb-0">Action, Fantasy</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-
-    </div>
-
-    <div>
-
-    </div>
-
-    <div>
-
-    </div>
-
-    <div>
-
-    </div>
-
 </main>
-<!--<th:block th:replace="fragments/footer :: footer"></th:block>-->
+<footer>
+
+    <th:block th:replace="fragments/footer :: footer"></th:block>
+
+</footer>
 </body>
