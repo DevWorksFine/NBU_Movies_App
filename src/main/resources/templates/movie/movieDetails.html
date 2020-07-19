@@ -3,8 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/9d2471305a.js"></script>
+    <link type="text/css" media="all" href="../../static/styles.css" th:href="@{/styles.css}" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body>
+
+<main>
+    <div class=" d-flex flex-column container">
+
+        <div class="movie">
+            <img src="https://image.tmdb.org/t/p/w300/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" alt="The Old Guard" class="movie__img">
+            
+            <div class="movie__info d-flex flex-column justify-content-between p-3 align-items-start">
+                <h2>The Old Guard</h2>
+                <h6 class="movie__tagline">Forever is harder than it looks</h6>
+                <div class="movie__control">
+                    <div title="Rating" class="movie__rating">7.4</div>
+                </div>
+                <p class="movie__overview">Four undying warriors who've secretly protected humanity for centuries become targeted for their mysterious powers just as they discover a new immortal.</p>
+                <div>
+                    <span class="mr-2">Genres:</span>
+                    <span class="mb-1 badge badge-warning">Action</span>
+                    <span class="mb-1 badge badge-warning">Fantasy</span>
+                </div>
+            </div>
+
+            <div class="movie__stat d-flex justify-content-between align-items-center">
+                <div><i class="fa fa-clock-o movie__icon" aria-hidden="true"></i>Release date: 10.7.2020</div>
+                <div><i class="fas fa-history movie__icon" aria-hidden="true"></i>Duration: 2h 04m</div>
+                <div><i class="fa fa-money movie__icon" aria-hidden="true"></i>Budget: $0</div>
+            </div>
+        </div>
+
+    </div>
+
+
+</main>
 
 </body>
 </html>
