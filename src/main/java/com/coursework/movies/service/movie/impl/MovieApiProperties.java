@@ -1,4 +1,4 @@
-package com.coursework.movies.service;
+package com.coursework.movies.service.movie.impl;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

@@ -1,22 +1,18 @@
-package com.coursework.movies.service;
+package com.coursework.movies.service.movie.impl;
 
 import com.coursework.movies.domain.movie.MovieDTO;
+import com.coursework.movies.service.movie.MovieDbConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriTemplate;
 
 import java.net.URI;
-import java.util.Collections;
 
 
 @Service
-public class MovieDbConsumerService {
+public class MovieDbConsumerServiceImpl implements MovieDbConsumerService {
 
     @Autowired
     private MovieApiProperties properties;
@@ -24,7 +20,7 @@ public class MovieDbConsumerService {
     private RestTemplate restTemplate;
 
     @Autowired
-    public MovieDbConsumerService(RestTemplateBuilder restTemplateBuilder) {
+    public MovieDbConsumerServiceImpl(RestTemplateBuilder restTemplateBuilder) {
         this.restTemplate = restTemplateBuilder.build();
     }
 
