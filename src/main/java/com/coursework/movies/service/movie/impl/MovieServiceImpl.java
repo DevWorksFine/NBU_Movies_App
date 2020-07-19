@@ -44,4 +44,14 @@ public class MovieServiceImpl implements MovieService {
         return movieDbConsumerServiceImpl.getMovieByTitle(title);
     }
 
+    public MovieDTO getMovieByTitleFromDb(String title) {
+
+        return mapper.map(movieRepository.findByTitle(title),MovieDTO.class);
+    }
+
+    public MovieDTO getMovieById(String id) {
+
+        return mapper.map(movieRepository.findById(Long.parseLong(id)),MovieDTO.class);
+    }
+
 }

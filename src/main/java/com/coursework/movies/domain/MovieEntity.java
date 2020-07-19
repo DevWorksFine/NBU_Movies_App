@@ -39,5 +39,11 @@ public class MovieEntity {
 
     private String plot;
 
+    private String genre;
+
+    private String imdbRating;
+
+    private String boxOffice;
+
 
 }

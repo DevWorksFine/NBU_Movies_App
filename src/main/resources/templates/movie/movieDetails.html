@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -15,31 +15,30 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body>
-
+<th:block th:replace="fragments/header :: header"></th:block>
 <main>
     <div class=" d-flex flex-column container">
 
         <div class="movie">
-            <img src="https://image.tmdb.org/t/p/w300/cjr4NWURcVN3gW5FlHeabgBHLrY.jpg" alt="The Old Guard" class="movie__img">
+            <img th:src="${movie.getPoster()}" alt="The Old Guard" class="movie__img">
             
             <div class="movie__info d-flex flex-column justify-content-between p-3 align-items-start">
-                <h2>The Old Guard</h2>
-                <h6 class="movie__tagline">Forever is harder than it looks</h6>
+                <h2 th:text="${movie.getTitle()}">The Old Guard</h2>
+                <h6 class="movie__tagline" th:text="${movie.getProduction()}">Forever is harder than it looks</h6>
                 <div class="movie__control">
-                    <div title="Rating" class="movie__rating">7.4</div>
+                    <div title="Rating" class="movie__rating" th:text="${movie.getImdbRating()}">7.4</div>
                 </div>
-                <p class="movie__overview">Four undying warriors who've secretly protected humanity for centuries become targeted for their mysterious powers just as they discover a new immortal.</p>
+                <p class="movie__overview" th:text="${movie.getPlot()}">Four undying warriors who've secretly protected humanity for centuries become targeted for their mysterious powers just as they discover a new immortal.</p>
                 <div>
                     <span class="mr-2">Genres:</span>
-                    <span class="mb-1 badge badge-warning">Action</span>
-                    <span class="mb-1 badge badge-warning">Fantasy</span>
+                    <span class="mb-1 badge badge-warning" th:text="${movie.getGenre()}">Action</span>
                 </div>
             </div>
 
             <div class="movie__stat d-flex justify-content-between align-items-center">
-                <div><i class="fa fa-clock-o movie__icon" aria-hidden="true"></i>Release date: 10.7.2020</div>
-                <div><i class="fas fa-history movie__icon" aria-hidden="true"></i>Duration: 2h 04m</div>
-                <div><i class="fa fa-money movie__icon" aria-hidden="true"></i>Budget: $0</div>
+                <div th:text="${movie.getReleased()}"><i class="fa fa-clock-o movie__icon" aria-hidden="true"></i></div>
+                <div><i class="fas fa-history movie__icon" aria-hidden="true"th:text="${movie.getRunTime()}"></i></div>
+                <div><i class="fa fa-money movie__icon" aria-hidden="true" th:text="${movie.getBoxOffice()}"></i></div>
             </div>
         </div>
 
@@ -47,6 +46,6 @@
 
 
 </main>
-
+<th:block th:replace="fragments/footer :: footer"></th:block>
 </body>
 </html>

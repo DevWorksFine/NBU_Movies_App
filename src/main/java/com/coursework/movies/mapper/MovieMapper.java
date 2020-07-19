@@ -11,6 +11,7 @@ public class MovieMapper extends ConfigurableMapper {
 
     protected void configure(MapperFactory mapperFactory) {
         mapperFactory.classMap(MovieDTO.class, MovieEntity.class)
+                .field("id","id")
                 .field("title","title")
                 .field("released","releaseDate")
                 .field("poster","poster")
@@ -21,6 +22,9 @@ public class MovieMapper extends ConfigurableMapper {
                 .field("production","production")
                 .field("writer","writer")
                 .field("plot","plot")
+                .field("genre","genre")
+                .field("imdbRating","imdbRating")
+                .field("boxOffice","boxOffice")
                 .register();
     }
 

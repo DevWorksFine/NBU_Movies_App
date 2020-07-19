@@ -19,7 +19,7 @@ body {
 }
 
 .footer {
-    position: fixed;
+    /*position: fixed;*/
     left: 0;
     bottom: 0;
     width: 100%;
@@ -28,12 +28,11 @@ body {
     /*background-image: linear-gradient(-100deg,black); */
     background-color: black;
     color: white;
-
 }
 .header {
     padding: 60px;
     text-align: center;
-    background: #000000;
+    background: black;
     color: white;
     font-size: 30px;
 }
@@ -145,7 +144,8 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     color: #dee2e6;
     position: relative;
-    display: grid;
+    /*display: grid;*/
+    display: flex;
     justify-content: start;
     grid-template-columns: 300px 1fr;
 }
@@ -171,13 +171,13 @@ body {
 }
 
 .movie__stat {
-    background-color: rgba(0, 0, 0, 0.8);
+    /*background-color: rgba(0, 0, 0, 0.8);*/
     width: 100%;
     padding: 15px;
     font-size: 1em;
     color: #adb5bd;
     grid-area: stat;
-    align-self: end;
+    align-self: flex-end;
 }
 .movie__stat div {
     display: flex;
@@ -401,9 +401,4 @@ body {
 
 footer, header, nav, main {
     display: block;
-}
-
-@media (min-width: 1200px)
-.container {
-    max-width: 1140px;
 }

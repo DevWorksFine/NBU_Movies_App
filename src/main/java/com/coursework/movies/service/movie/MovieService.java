@@ -10,4 +10,6 @@ public interface MovieService {
     MovieEntity saveMovie(MovieDTO movieDTO);
     List<MovieDTO> getAllMovies();
     MovieDTO getMovieByTitle(String title);
+    MovieDTO getMovieById(String id);
+    MovieDTO getMovieByTitleFromDb(String title);
 }

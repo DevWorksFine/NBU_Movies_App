@@ -15,6 +15,7 @@ import java.util.List;
 @JsonIgnoreProperties
 public class MovieDTO implements Serializable {
 
+    private Long id;
     @JsonProperty("Title")
     private String title;
     @JsonProperty("Year")
