@@ -402,3 +402,46 @@ body {
 footer, header, nav, main {
     display: block;
 }
+
+
+/* /////////// INDEX2 /////////// */
+
+.user-upload,
+.user-file,
+.user-info{
+    color: #ffff;
+}
+
+/* /////////// LOGIN /////////// */
+
+.min-vh-100 {
+    min-height: 100vh!important;
+}
+
+.card-register {
+    background-color: rgba(37,34,34,.75);
+    border-radius: 8px;
+    color: #fff;
+    max-width: 350px;
+    min-height: 400px;
+    padding: 30px;
+}
+
+.card-register .title {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 500;
+}
+
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+
+.mr-auto, .mx-auto {
+    margin-right: auto!important;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
