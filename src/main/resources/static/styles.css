@@ -364,6 +364,10 @@ body {
     justify-content: flex-end !important;
 }
 
+.navbar-nav {
+    flex-direction: inherit !important;
+}
+
 .navbar .navbar-nav .nav-item .nav-link {
     line-height: 1.6;
     margin: 15px 3px;

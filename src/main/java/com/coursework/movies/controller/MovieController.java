@@ -21,13 +21,13 @@ public class MovieController extends AbstractController {
     @Autowired
     private MovieService movieService;
 
-    @GetMapping(value = "/get", produces = "application/json")
-    public ResponseEntity<MovieDTO> getMovieByTitle(@RequestParam(value = "title") String title) {
+    @GetMapping(value = "/get")
+    public ModelAndView getMovieByTitle(@RequestParam(value = "title") String title) {
 
         MovieDTO movie = movieService.getMovieByTitle(title);
         movieService.saveMovie(movie);
 
-        return new ResponseEntity<>(movie, HttpStatus.OK);
+        return this.redirect("/movie/all");
     }
 
     @GetMapping(value = "/all", produces = "application/json")
@@ -44,6 +44,12 @@ public class MovieController extends AbstractController {
         model.addObject("movie",movieService.getMovieByTitleFromDb(title));
 
         return this.getView("movie/movieDetails",model);
+    }
+
+    @GetMapping(value = "/add", produces = "application/json")
+    public ModelAndView getMovieById( ModelAndView model) {
+
+        return this.getView("movie/addMovie",model);
     }
 
 }
