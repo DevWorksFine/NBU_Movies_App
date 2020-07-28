@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="/favicon.ico"/>
     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/9d2471305a.js"></script>
-    <link type="text/css" media="all" href="../../static/styles.css" th:href="@{/styles.css}" rel="stylesheet"/>
+    <link type="text/css" media="all" href="../../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet"/>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -26,11 +26,16 @@
 
 <th:block th:replace="fragments/header :: header"></th:block>
 
-<div class="container-fluid">
-    <div class="d-flex flex-wrap justify-content-md-between justify-content-center mw-50 ">
-        <form action="#" th:action="@{~/movie/get}" method="get">
-            <input type="text" th:name="title"/>
-            <input type="submit" />
+
+<div class="min-vh-100 d-flex justify-content-center align-items-center">
+    <div class="card-register">
+        <h3 class="title mx-auto">Sign In</h3>
+        <form class="register-form" action="#" th:action="@{~/movie/get}" method="get">
+            <div class="form-group"><label>Movie Title</label><input name="title" class="form-control" value=""/>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn-round btn btn-danger btn-block">Add Movie</button>
+            </div>
         </form>
     </div>
 </div>

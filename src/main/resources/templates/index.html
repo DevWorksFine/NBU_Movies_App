@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <title>Getting Started: Serving Web Content>nt</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="/favicon.ico"/>
     <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/9d2471305a.js"></script>
-    <link type="text/css" media="all" href="../static/styles.css" th:href="@{/styles.css}" rel="stylesheet"/>
+    <link type="text/css" media="all" href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet"/>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -24,7 +24,6 @@
 
 <body>
 <th:block th:replace="fragments/header :: header"></th:block>
-
 <!--
 <h1>Home page</h1>
 <form action="#" th:action="@{/getmovie}" method="get">

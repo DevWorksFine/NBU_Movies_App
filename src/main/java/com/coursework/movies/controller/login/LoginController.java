@@ -32,7 +32,7 @@ public class LoginController extends AbstractController {
             model.addAttribute("error", error);
         }
 
-        return this.getView("login");
+        return this.getView("/login");
     }
 
     /**
@@ -44,6 +44,7 @@ public class LoginController extends AbstractController {
     public ModelAndView loginPost() {
         return this.redirect("movie/all");
     }
+
 
 
 }

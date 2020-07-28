@@ -28,19 +28,23 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .successForwardUrl("/loginPost")
                 .failureUrl("/")
                 .and()
-                .logout().logoutRequestMatcher(new AntPathRequestMatcher("logout"))
+                .logout()
+//                .logoutRequestMatcher(new AntPathRequestMatcher("logout"))
                 .logoutSuccessUrl("/login")
-                .permitAll();
+                .permitAll()
+                .and()
+                .csrf().disable();
+
     }
 
     @Override
     public void configure(WebSecurity web) {
         web
                 .ignoring()
-//                .antMatchers("/resources/**")
                 .antMatchers("/css/*")
                 .antMatchers("/img/*")
                 .antMatchers("/js/*");
+//                .antMatchers("/resources/**")
 //                .anyRequest();
     }
 
