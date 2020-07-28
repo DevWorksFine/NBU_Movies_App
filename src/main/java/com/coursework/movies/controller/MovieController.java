@@ -13,6 +13,8 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 
+import java.security.Principal;
+
 
 @Controller
 @RequestMapping("movie")
@@ -31,8 +33,8 @@ public class MovieController extends AbstractController {
     }
 
     @GetMapping(value = "/all", produces = "application/json")
-    public ModelAndView getAllMovies(ModelAndView model) {
-
+    public ModelAndView getAllMovies(Principal principal,ModelAndView model) {
+        model.addObject("name",principal.getName());
         model.addObject("movies",movieService.getAllMovies());
 
         return this.getView("index",model);

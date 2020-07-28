@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
 }
-
 *,
 :after,
 :before {
@@ -47,7 +46,7 @@ body {
     margin: auto 10px auto 0;
 }
 
-.navbar .nav-title {
+.navbar .nav-title .user-a {
     color: #ffc107;
     margin: auto 20px auto 0;
     font-weight: 300;

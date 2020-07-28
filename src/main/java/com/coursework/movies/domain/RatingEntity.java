@@ -1,6 +1,7 @@
 package com.coursework.movies.domain;
 
 
+import com.coursework.movies.domain.user.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
